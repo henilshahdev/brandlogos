@@ -22,7 +22,7 @@ export default function RootLayout({
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
 					<div className="flex flex-col min-h-[100dvh]">
 						<Navbar />
-						{children}
+						<div className="flex-1 wrapper">{children}</div>
 						<Footer />
 					</div>
 				</ThemeProvider>
