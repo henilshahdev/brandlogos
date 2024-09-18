@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Outfit } from "next/font/google";
+import { ThemeProvider } from "@/components/shared/theme-provider";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -14,8 +17,16 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body className={outfit.className}>{children}</body>
+		<html lang="en" className="dark">
+			<body className={`${outfit.className} bg-background text-foreground`}>
+				<ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+					<div className="flex flex-col min-h-[100dvh]">
+						<Navbar />
+						{children}
+						<Footer />
+					</div>
+				</ThemeProvider>
+			</body>
 		</html>
 	);
 }
