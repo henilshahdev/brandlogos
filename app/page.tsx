@@ -23,9 +23,19 @@ const page = async () => {
 								Discover a collection of high-quality, lightweight, and customizable brand icons in SVG
 								format.
 							</p>
-							<Button className="mt-6 w-max mx-auto md:mx-0 text-base" size="lg" asChild>
-								<Link href="#">Get Started</Link>
-							</Button>
+							<div className="flex-start gap-6">
+								<Button className="mt-6 w-max mx-auto md:mx-0 text-base" size="lg" asChild>
+									<Link href="/icons">Icons</Link>
+								</Button>
+								<Button
+									className="mt-6 w-max mx-auto md:mx-0 text-base"
+									size="lg"
+									variant="outline"
+									asChild
+								>
+									<Link href="/getStarted">Learn More</Link>
+								</Button>
+							</div>
 						</div>
 						<div className="lg:col-span-3">
 							<LandingPage />

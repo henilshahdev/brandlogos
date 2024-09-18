@@ -17,11 +17,11 @@ const Navbar = () => {
 					<p className="text-lg md:text-2xl font-semibold">Brand Logos</p>
 				</Link>
 				<div className="flex-end gap-6">
+					<Link className="link hidden md:block" href="/icons">
+						Icons
+					</Link>
 					<Link className="link hidden md:block" href="/getStarted">
 						Get Started
-					</Link>
-					<Link className="link hidden md:block" href="/examples">
-						Examples
 					</Link>
 					<Link className="link hidden md:block" href="/license">
 						License
