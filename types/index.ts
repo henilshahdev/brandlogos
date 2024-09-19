@@ -1,3 +1,5 @@
+export type IconProps = React.HTMLAttributes<SVGElement>;
+
 export enum Category {
 	All = "All",
 	Apparels = "Apparels",
@@ -12,5 +14,8 @@ export enum Category {
 
 export type CategoryIcon = {
 	category: Category;
-	icons: React.ElementType[];
+	icons: {
+		icon: (props: IconProps) => JSX.Element;
+		name: string;
+	}[];
 };
