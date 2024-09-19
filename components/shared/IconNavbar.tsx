@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { categories } from "@/registry/icons";
 
 const IconNavbar = () => {
 	return (
@@ -17,16 +18,14 @@ const IconNavbar = () => {
 				</Label>
 				<Select>
 					<SelectTrigger className="w-full text-base">
-						<SelectValue placeholder="Showing 7 Categories" />
+						<SelectValue placeholder={`Showing ${categories.length} Categories`} />
 					</SelectTrigger>
 					<SelectContent id="sortBy">
-						<SelectItem value="apparels">Apparels</SelectItem>
-						<SelectItem value="streaming">Streaming</SelectItem>
-						<SelectItem value="programming">Programming</SelectItem>
-						<SelectItem value="social">Social</SelectItem>
-						<SelectItem value="gaming">Gaming</SelectItem>
-						<SelectItem value="utilities">Utilities</SelectItem>
-						<SelectItem value="other">Other</SelectItem>
+						{categories.map((category: string) => (
+							<SelectItem className="text-base" key={category} value={category}>
+								{category}
+							</SelectItem>
+						))}
 					</SelectContent>
 				</Select>
 			</div>
