@@ -8,7 +8,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<div className="flex flex-col h-screen overflow-hidden">
+		<div className="flex flex-col gap-4 h-screen overflow-hidden">
 			<Navbar />
 			<div className="flex-grow flex flex-col gap-8 overflow-hidden wrapper">
 				<IconNavbar />
